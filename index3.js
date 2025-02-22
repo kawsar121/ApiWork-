@@ -4,7 +4,13 @@ function js3(){
         .then(data => explore(data))
 }
 function explore(data){             //ekhane data na likhe onno kisu likle o hoto
+    const ul = document.getElementById('ul-con');
     for(const user of data){
-        console.log(user.email)
+        const li = document.createElement('li');
+        li.innerText = user.name;
+        ul.appendChild(li)
+        
+        
     }
+   
 }
